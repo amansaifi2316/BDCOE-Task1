@@ -28,7 +28,6 @@
                 Challenge Your<br>
                 <span class="highlight">Knowledge</span>
             </h1>
-
             <p>
                 Sharpen your mind with beautifully crafted quizzes across
                 science, technology, math and more. Learn something new
@@ -40,71 +39,113 @@
                 <button class="explore-button">Explore Quizzes</button>
             </div>
         </div>
+
         <div class="main-image">
             <img src="quiz-image.png" alt="Quiz Image">
         </div>
+
     </section>
+
     <div class="stats">
         <div>
             <div class="stat-number">10K+</div>
             <div class="stat-label">Questions</div>
         </div>
+
         <div>
             <div class="stat-number">5K+</div>
             <div class="stat-label">Learners</div>
         </div>
+
         <div>
             <div class="stat-number">100+</div>
             <div class="stat-label">Quizzes</div>
         </div>
     </div>
-<section class="quiz-section" id="quiz-section">
-    <div class="section-heading">
-        <h2>Explore Quizzes</h2>
-        <p>Test your knowledge across different subjects.</p>
-    </div>
-    <div class="quiz-cardboxs">
-        <div class="quiz-card">
-            <h3>Science</h3>
-            <p>Challenge yourself with science questions.</p>
-            <span>20 Questions →</span>
-        </div>
-        <div class="quiz-card">
-            <h3>Technology</h3>
-            <p>Test your knowledge of modern technology.</p>
-            <span>15 Questions →</span>
-        </div>
-        <div class="quiz-card">
-            <h3>Mathematics</h3>
-            <p>Put your mathematical skills to the test.</p>
-            <span>20 Questions →</span>
-        </div>
-    </div>
-</section>
-<section class="how-it-works" id="how-it-works">
-    <div class="section-heading">
-        <p>How It Works</p>
-        <h2>Three steps to a sharper mind</h2>
-        <p>Everything you need to learn, challenge yourself and improve.</p>
-    </div>
-    <div class="steps-box">
-        <div class="step">
-            <h3>Choose a category</h3>
-            <p>Browse curated topics from programming to world history.</p>
+
+    <section class="quiz-section" id="quiz-section">
+
+        <div class="section-heading">
+            <h2>Explore Quizzes</h2>
+            <p>Test your knowledge across different subjects.</p>
         </div>
 
-        <div class="step">
-            <h3>Beat the clock</h3>
-            <p>Answer ten randomised questions with a gentle timer keeping you honest.</p>
+        <div class="quiz-cardboxs">
+
+            <div class="quiz-card">
+                <h3>Science</h3>
+                <p>Challenge yourself with science questions.</p>
+                <span>10 Questions →</span>
+            </div>
+
+            <div class="quiz-card">
+                <h3>Technology</h3>
+                <p>Test your knowledge of modern technology.</p>
+                <span>10 Questions →</span>
+            </div>
+
+            <div class="quiz-card">
+                <h3>Mathematics</h3>
+                <p>Put your mathematical skills to the test.</p>
+                <span>10 Questions →</span>
+            </div>
+
+        </div>
+    </section>
+
+
+    
+    <section class="how-it-works" id="how-it-works">
+
+        <div class="section-heading">
+            <p>How It Works</p>
+            <h2>Three steps to a sharper mind</h2>
+            <p>Everything you need to learn, challenge yourself and improve.</p>
         </div>
 
-        <div class="step">
-            <h3>Track your score</h3>
-            <p>See a full breakdown, celebrate wins and retry to improve.</p>
+        <div class="steps-box">
+
+            <div class="step">
+                <h3>Choose a category</h3>
+                <p>Browse curated topics from programming to world history.</p>
+            </div>
+
+            <div class="step">
+                <h3>Answer the questions</h3>
+                <p>Answer ten science questions and challenge yourself to improve your score.</p>
+            </div>
+
+            <div class="step">
+                <h3>Track your score</h3>
+                <p>See your final score, celebrate wins and retry to improve.</p>
+            </div>
+
         </div>
+    </section>
+
+    <div class="quiz-container">
+
+        <div class="quiz-top">
+            <span id="question-number">Question 1 of 10</span>
+        </div>
+
+        <div class="progress">
+            <div id="progress-bar"></div>
+        </div>
+
+        <div class="quiz-box">
+
+            <h1 id="question">Question will appear here</h1>
+
+            <div id="options"></div>
+
+            <button id="next-btn">Next →</button>
+
+        </div>
+
     </div>
-</section>
+
+    <script src="script.js"></script>
 
 </body>
-
 </html>
