@@ -4,19 +4,30 @@
     box-sizing: border-box;
 }
 
+body {
+    background: #121212;
+    color: #ececec;
+}
+
 .navbar {
     height: 70px;
     padding: 0 50px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: whitesmoke;
+    background-color: #1a1a1a;
+    border-bottom: 1px solid #2c2c2c;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
 }
 
 .logo {
-    font-family: 'Pacifico', cursive;
+    font-family: Georgia, 'Times New Roman', serif;
     font-size: 1.5rem;
-
+    color: #ececec;
 }
 
 .nav-links {
@@ -24,68 +35,285 @@
     align-items: center;
     gap: 20px;
     list-style: none;
-
 }
 
 .nav-links a {
-    color: black;
+    color: #ececec;
     text-decoration: none;
     font-size: 16px;
 }
 
 .nav-links a:hover {
-    color: #1e1e2b;
-  transition-delay: 0.5s;
+    color: #d4a054;
+    transition: 0.3s;
 }
 
 .start-quiz {
- outline: none;
- cursor: pointer;
- border: none;
- padding: 0.9rem 2rem;
- margin: 0;
- font-family: 'Pacifico', cursive;
- font-size: 1.2rem;
- position: relative;
- display: inline-block;
- letter-spacing: 0.05rem;
- font-weight: 700;
- font-size: 17px;
- border-radius: 500px;
- overflow: hidden;
- background: #D9E5F0;
- color: ghostwhite;
+    outline: none;
+    cursor: pointer;
+    border: none;
+    padding: 0.9rem 2rem;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    border-radius: 500px;
+    overflow: hidden;
+    background: #d4a054;
+    color: #121212;
+    position: relative;
 }
 
 .start-quiz span {
- position: relative;
- z-index: 10;
- transition: color 0.4s;
+    position: relative;
+    z-index: 10;
+    transition: color 0.4s;
 }
 
 .start-quiz:hover span {
- color: black;
-}
-
-.start-quiz::before,
-.start-quiz::after {
- position: absolute;
- top: 0;
- left: 0;
- width: 100%;
- height: 100%;
- z-index: 0;
+    color: #ececec;
 }
 
 .start-quiz::before {
- content: "";
- background: #000;
- width: 120%;
- left: -10%;
- transform: skew(30deg);
- transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -10%;
+    width: 120%;
+    height: 100%;
+    z-index: 0;
+    background: #2c2c2c;
+    transform: skew(30deg);
+    transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
 }
 
 .start-quiz:hover::before {
- transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+}
+
+.main-content {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    min-height: 385px;
+    padding: 45px 45px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.main-text {
+    width: 50%;
+    max-width: 700px;
+}
+
+.main-content h1 {
+    font-weight: 700;
+    font-size: 44px;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+}
+
+.main-content .highlight {
+    color: #d4a054;
+}
+
+.main-content p {
+    margin-top: 16px;
+    font-size: 18px;
+    line-height: 1.7;
+    color: #b3b3b3;
+    max-width: 750px;
+}
+
+.main-actions {
+    margin-top: 24px;
+    display: flex;
+    gap: 14px;
+}
+
+.start-button {
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 12px 22px;
+    border-radius: 4px;
+    background: #d4a054;
+    color: #121212;
+    border: 1px solid #d4a054;
+    cursor: pointer;
+}
+
+.start-button:hover {
+    background: #e6b366;
+}
+
+.explore-button {
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 12px 22px;
+    border-radius: 4px;
+    background: transparent;
+    color: #ececec;
+    border: 1px solid #3a3a3a;
+    cursor: pointer;
+}
+
+.explore-button:hover {
+    background: #1f1f1f;
+}
+
+.main-image {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.main-image img {
+    width: 95%;
+    max-width: 700px;
+    height: auto;
+    display: block;
+}
+
+.stats {
+    padding: 32px 45px 60px;
+    display: flex;
+    gap: 48px;
+    border-top: 1px solid #2c2c2c;
+    margin-top: 0;
+}
+
+.stat-number {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #ececec;
+}
+
+.stat-label {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 16px;
+    color: #b3b3b3;
+    margin-top: 2px;
+}
+
+.quiz-section {
+    padding: 55px 45px;
+    border-top: 1px solid #2c2c2c;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.section-heading h2 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 32px;
+    color: #ececec;
+}
+
+.section-heading p {
+    margin-top: 8px;
+    color: #888;
+    font-size: 16px;
+}
+
+.quiz-cardboxs {
+    display: flex;
+    gap: 22px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.quiz-card {
+    flex: 1;
+    padding: 25px;
+    background: #1a1a1a;
+    border: 1px solid #2c2c2c;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.quiz-card:hover {
+    transform: translateY(-5px);
+    border-color: #d4a054;
+}
+
+.quiz-card h3 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.quiz-card p {
+    color: #999;
+    line-height: 1.5;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.quiz-card span {
+    color: #d4a054;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+.how-it-works {
+    padding: 70px 45px;
+    border-top: 1px solid #2c2c2c;
+}
+
+.how-it-works .section-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.how-it-works .section-heading h2 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 34px;
+    color: #ececec;
+}
+
+.how-it-works .section-heading p {
+    margin-top: 10px;
+    color: #888;
+    font-size: 16px;
+}
+
+.steps-box {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    gap: 25px;
+}
+
+.step {
+    flex: 1;
+    padding: 30px 25px;
+    text-align: center;
+    background: #1a1a1a;
+    border: 1px solid #2c2c2c;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.step:hover {
+    transform: translateY(-6px);
+    border-color: #d4a054;
+}
+
+.step h3 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+
+.step p {
+    color: #999;
+    line-height: 1.6;
+    font-size: 15px;
 }
