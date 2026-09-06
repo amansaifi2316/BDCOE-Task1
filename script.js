@@ -97,7 +97,7 @@ const questions = [
         ],
         answer: 1
     },
-    
+
     {
         question: "Which force keeps planets in orbit around the Sun?",
         options: [
@@ -120,6 +120,7 @@ const optionsElement = document.getElementById("options");
 const nextButton = document.getElementById("next-btn");
 const questionNumber = document.getElementById("question-number");
 const progressBar = document.getElementById("progress-bar");
+
 
 
 
@@ -232,3 +233,15 @@ nextButton.addEventListener("click", () => {
     }
 });
 showQuestion();
+
+const startQuizButtons = document.querySelectorAll(".start-quiz, .start-button"); 
+const quizContainer = document.querySelector(".quiz-container"); 
+
+startQuizButtons.forEach(button => { 
+    button.addEventListener("click", () => {
+         quizContainer.scrollIntoView({ 
+            
+            behavior: "smooth", block: "start" 
+        }); 
+    }); 
+});
